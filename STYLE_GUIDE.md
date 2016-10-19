@@ -86,6 +86,13 @@ namespace System.Collections.Generic
             get { return _count; }
         }
 
+       /**
+        * Add a node to the end of a linked list
+        * @param {<T>} value  
+        *     Value to add at the end of the list
+        * @return {ObservableLinkedListNode}
+        *     Returns a node
+        */
         public ObservableLinkedListNode AddLast(T value) 
         {
             var newNode = new LinkedListNode<T>(this, value);
