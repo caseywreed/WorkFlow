@@ -173,4 +173,24 @@ namespace System.Collections.Generics
       ...
 ``` 
 
+### VS Code Snippet
 
+Paste the following into your Visual Studio Code Code Snippets to autocomplete class documentation boilerplate when you type `doc`:
+
+```C#
+"Class Comment": {
+     "prefix": "DocClass",
+     "body": [
+            "/**",
+            " * Class: NAME",
+            " * Purpose: PURPOSE DESCRIPTION",
+            " * Author: AUTHOR NAME",
+            " * Methods:",
+            " *   first() - description",
+            " *   second(string variable) - description",
+            " *       variable - description of variable",
+            " */"
+     ],
+     "description": "Document a Class"
+ }
+```
