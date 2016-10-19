@@ -126,6 +126,7 @@ using System;
 
 namespace System.Collections.Generics
 {
+    
     partial class ObservableLinkedList<T>
     {
         public class ObservableLinkedListNode
@@ -151,5 +152,25 @@ namespace System.Collections.Generics
     }
 }
 ```
+
+## Example of documenting a class
+
+```
+/**
+  * Class: Animal
+  * Purpose: Used to create a basic animal instance
+  * Author: Steve Brownlee 
+  * Methods:
+  *   eat() - feeds the animal
+  *   string eat(string food) - feeds animal specific kind of food
+  *       food - type of food
+  *   string sleep() - changed status of animal to sleep
+  *   string move() - prints that the animal has moved 
+  *   string reproduce() - prints that the animal has reproducted
+  */
+  public class Animal : IAnimal
+  {
+
+``` 
 
 
