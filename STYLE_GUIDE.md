@@ -153,10 +153,10 @@ namespace System.Collections.Generics
 }
 ```
 
-## Example of documenting a class
+### Example of documenting a class
 
 ```
-/**
+ /**
   * Class: Animal
   * Purpose: Used to create a basic animal instance
   * Author: Steve Brownlee 
@@ -170,7 +170,7 @@ namespace System.Collections.Generics
   */
   public class Animal : IAnimal
   {
-
+      ...
 ``` 
 
 
