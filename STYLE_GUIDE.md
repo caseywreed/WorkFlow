@@ -167,7 +167,7 @@ namespace System.Collections.Generics
   *   string sleep() - changed status of animal to sleep
   *   string move() - prints that the animal has moved 
   *   string reproduce() - prints that the animal has reproducted
-  */
+  **/
   public class Animal : IAnimal
   {
       ...
