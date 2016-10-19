@@ -24,4 +24,4 @@ Version 1.0
 
 ## Style Guide
 
-To be determined.
+[Official Team Charles Style Guide](https://github.com/TeamCharles/WorkFlow/blob/master/STYLE_GUIDE.md)
