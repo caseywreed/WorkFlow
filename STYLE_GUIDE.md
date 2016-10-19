@@ -13,7 +13,7 @@ For non code files (xml etc) our current best guidance is consistency. When edit
 
 The general rule we follow is "use Visual Studio defaults".
 
-1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and it must not be nested in other statement blocks that use braces (See issue [381](https://github.com/dotnet/corefx/issues/381) for examples). 
+1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and it must not be nested in other statement blocks that use braces. 
 2. We use four spaces of indentation (no tabs).
 3. We use `_camelCase` for internal and private fields and use `readonly` where possible. Prefix instance fields with `_`, static fields with `s_` and thread static fields with `t_`. When used on static fields, `readonly` should come after `static` (i.e. `static readonly` not `readonly static`).
 4. We avoid `this.` unless absolutely necessary. 
@@ -26,27 +26,22 @@ The general rule we follow is "use Visual Studio defaults".
    blank lines between members of a type.
 8. Avoid spurious free spaces.
    For example avoid `if (someVar == 0)...`, where the dots mark the spurious free spaces.
-   Consider enabling "View White Space (Ctrl+E, S)" if using Visual Studio, to aid detection.
+   Consider enabling "Trim White Space on Save" in Visual Studio Code.
 9. If a file happens to differ in style from these guidelines (e.g. private members are named `m_member`
    rather than `_member`), the existing style in that file takes precedence.
 10. We only use `var` when it's obvious what the variable type is (i.e. `var stream = new FileStream(...)` not `var stream = OpenStandardInput()`).
-11. We use language keywords instead of BCL types (i.e. `int, string, float` instead of `Int32, String, Single`, etc) for both type references as well as method calls (i.e. `int.Parse` instead of `Int32.Parse`). See issue [391](https://github.com/dotnet/corefx/issues/391) for examples.
+11. We use language keywords instead of BCL types (i.e. `int, string, float` instead of `Int32, String, Single`, etc) for both type references as well as method calls (i.e. `int.Parse` instead of `Int32.Parse`).
 12. We use PascalCasing to name all our constant local variables and fields. The only exception is for interop code where the constant value should exactly match the name and value of the code you are calling via interop.
 13. We always avoid the use of magic numbers. Instead, we explicitly define constant variables that hold number values.
 14. We user verbs and action words to name methods and functions.
-15. Place the comment on a separate line, not at the end of a line of code.
-16. Begin comment text with an uppercase letter.
-17. End comment text with a period.
-18. Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.
+15. We always place a comment on a separate line, not at the end of a line of code.
+16. We begin comment text with an uppercase letter.
+17. We end comment text with a period.
+18. We insert one space between the comment delimiter (//) and the comment text, as shown in the following example.
 
-```csharp
+```C#
 // Sets the _favNumber field to an integer.
 ```
-
-[2:13]  
-Do not create formatted blocks of asterisks around comments
-
-We recommend the [.NET Codeformatter Tool](https://github.com/dotnet/codeformatter) to ensure the code base maintains a consistent style over time, the tool automatically fixes the code base to conform to the guidelines outlined above.
 
 ### Example File:
 
@@ -86,13 +81,6 @@ namespace System.Collections.Generic
             get { return _count; }
         }
 
-       /**
-        * Add a node to the end of a linked list
-        * @param {<T>} value  
-        *     Value to add at the end of the list
-        * @return {ObservableLinkedListNode}
-        *     Returns a node
-        */
         public ObservableLinkedListNode AddLast(T value) 
         {
             var newNode = new LinkedListNode<T>(this, value);
@@ -153,7 +141,7 @@ namespace System.Collections.Generics
 }
 ```
 
-### Example of documenting a class
+### Example Class Documentation
 
 ```
  /**
@@ -175,7 +163,7 @@ namespace System.Collections.Generics
 
 ### VS Code Snippet
 
-Paste the following into your Visual Studio Code Code Snippets to autocomplete class documentation boilerplate when you type `doc`:
+Paste the following into your Visual Studio Code Code Snippets to autocomplete a class documentation snippet when you type `doc`:
 
 ```C#
 "Class Comment": {
