@@ -3,6 +3,13 @@ Official Team Charles™ Work Flow 💪
 
 Version 1.0
 
+## Table of Contents
+
+* [Starting a New Project](https://github.com/TeamCharles/WorkFlow#starting-a-new-project)
+* [Resolving a Ticket](https://github.com/TeamCharles/WorkFlow#resolving-a-ticket)
+* [Style Guide](https://github.com/TeamCharles/WorkFlow#style-guide)
+* [Employee Handbook](https://github.com/TeamCharles/WorkFlow#employee-handbook)
+
 ## Starting a New Project
 
 1. Create a new Github repo
@@ -25,3 +32,7 @@ Version 1.0
 ## Style Guide
 
 [Official Team Charles Style Guide](https://github.com/TeamCharles/WorkFlow/blob/master/STYLE_GUIDE.md)
+
+## Employee Handbook
+
+[The Bangazon Employee Handbook](https://github.com/TeamCharles/bangazon-inc/blob/master/EMPLOYEE_HANDBOOK.md)
